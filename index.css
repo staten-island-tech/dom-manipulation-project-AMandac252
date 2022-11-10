@@ -6,23 +6,6 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
-
-.holdingcontainer {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  
-  .postcontainer {
-    display: flex;
-    flex-direction: row;
-    width: 80%;
-    align-items: center;
-    margin-top: 2rem;
-  }
-
   .post{
     color: #4e536c;
   }

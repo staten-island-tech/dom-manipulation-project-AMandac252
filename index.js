@@ -12,8 +12,11 @@
 const DOMSelectors = {
   text: document.querySelector("post"),
   button: document.querySelector("btn"),
-  userList: document.querySelectorAll("list"),
 };
 
 text.classList.add("post");
 button.addEventListener("click", function () {});
+
+//get data from info from user and save it
+//make user info into an object
+//push data into html
