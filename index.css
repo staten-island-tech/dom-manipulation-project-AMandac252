@@ -1,11 +1,48 @@
-body {
-    font-family: "Cardo", serif;
-    background-color: rgb(255, 244, 231);
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* body{
+  display: flex; 
+  justify-content: center;
+  align-items: center;
 }
-  .post{
-    color: #4e536c;
-  }
+
+.post-container{
+  width: 350px;
+  padding: 20px 10px; 
+  background-color: bisque;
+  border-radius: 20px;
+  box-shadow: 0 0 30px;
+
+  display: flex;
+}
+
+.post{
+  align-items: center;
+  padding: 20px 10px; 
+  display: flex;
+  flex-direction: column;
+}
+
+input{
+  flex: 5; 
+  margin-right: 10px;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+#add-task{
+  flex: 1;
+  transition: .3s;
+  font-size: 1.3rem;
+  padding: 5px;
+  width: 40px;
+
+  background-color: #fff;
+  color: green;
+  border: green solid 2px;
+  border-radius: 5px; 
+  
+}
+
+#add-task:hover{
+  background-color: green;
+  color:#fff;
+} */

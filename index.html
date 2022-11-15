@@ -13,30 +13,37 @@
 </head>
 
 <body>
-    <div class="holding container">
-        <div class="post container">
-            <div class="post">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam voluptate deleniti obcaecati illo
-                laborum, dignissimos deserunt tempora repellat? Nihil exercitationem asperiores rerum ut porro. Eveniet
-                molestiae aliquid rem at nihil!
-            </div>
-            <button class="btn">click me</button>
-            <ul class="list">
-                <li>help</li>
-                <li>help</li>
-                <li>help</li>
-                <li>help</li>
-            </ul>
+    <h1>What music do you like?</h1>
+    <section>
+        <div class="form">
+            <form action="" method="get" class="form-inputs">
+                <div class="input1">
+                    <label for="title">Enter the title: </label>
+                    <input type="text" name="title" id="title" required>
+                </div>
+
+                <div class="input2">
+                    <label for="image">Upload image: </label>
+                    <input type="url" name="image" id="image" required>
+                </div>
+
+                <div class="input3">
+                    <label for="url">Upload link: </label>
+                    <input type="url" name="link" id="link" required>
+                </div>
+
+                <div class="form-submit">
+                    <input type="submit" value="+" class="btn">
+                </div>
+
+            </form>
+
         </div>
-    </div>
+    </section>
 
-    <label>StudentName:
-        <input type="text" id="txtName" />
-    </label>
-    <br>
-    <button type="submit">Submit</button>
-    <button type=" button" value="delete" onclick="deleteSomething()">Delete</button>
+    <section class="display-card" id="card">
 
+    </section>
 
     <script src="index.js"></script>
 </body>
