@@ -27,12 +27,42 @@ const DOMSelectors = {
   title: document.getElementsByClassName("input1"),
   image: document.getElementsByClassName("input2"),
   link: document.getElementsByClassName("input3"),
+  text: document.querySelector("post"),
+  button: document.querySelector("btn"),
 };
 
-<div class="display-card" id="card">
-  <h2 class="card-header">${input1}</h2>
-  <img src="${input}" alt="song image" class="card-img" />
-  <h3 class="card-link">${input3}</h3>
 
-  <button type="button" id="remove-card"></button>
-</div>;
+button.addEventListener("click", function () {
+    let text = document.createElement('div');
+    text.classList.add("post");
+
+    let li = document.createElement('li');
+    li.innerText = 
+    <div class="display-card" id="card">
+    <h2 class="card-header">${input1}</h2>
+    <img src="${input2}" alt="song image" class="card-img" />
+    <h3 class="card-link">${input3}</h3>
+  
+    <button type="button" id="remove-card"></button>
+  </div>;
+   
+});
+
+
+
+
+
+cardElements();
+removeEventListener(); 
+
+const card = document.querySelectorAll('.card');
+const remove = document.querySelectorAll('#removecard');
+
+remove.forEach((card) => {
+
+})
+function removeEventListener() {
+remove.addEventListener("click", function (){
+})
+} */
+}
