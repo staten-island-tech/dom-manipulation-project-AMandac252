@@ -8,9 +8,9 @@
 //seperate functional functions
 
 const DOMSelectors = {
-  title: document.getElementsByClassName("input1"),
-  image: document.getElementsByClassName("input2"),
-  link: document.getElementsByClassName("input3"),
+  title: document.getElementById("title"),
+  image: document.getElementById("image"),
+  link: document.getElementByID("link"),
   text: document.querySelector("post"),
   button: document.querySelector("btn"),
   form: document.querySelector("form"),
@@ -19,14 +19,13 @@ const DOMSelectors = {
   //display
 };
 
-//form function submit
 DOMSelectors.form.addEventListener("submit", function additem(event) {
   event.preventDefault();
   console.log("submit");
 
-  const title = DOMSelectors.input1.value;
-  const img = DOMSelectors.input2.value;
-  const link = DOMSelectors.input3.value;
+  let title = DOMSelectors.title.value;
+  let img = DOMSelectors.image.value;
+  let link = DOMSelectors.link.value;
 
   DOMSelectors.display.insertAdjacentHTML(
     "beforeend",
@@ -49,20 +48,14 @@ DOMSelectors.form.addEventListener("submit", function additem(event) {
 //read the values
 //create object from the values
 //create and push HTML
+DOMSelectors.form.addEventListener("click", function removecard(event) {
+  event.preventDefault();
+});
 
-/* <div class="display-card" id="card">
-    <h2 class="card-header">${input1}</h2>
-    <img src="${input2}" alt="song image" class="card-img" />
-    <h3 class="card-link">${input3}</h3>
-
-    <button type="button" id="remove-card"></button>
-  </div>; */
-
-/* const card = document.querySelectorAll(".card");
+const card = document.querySelectorAll(".card");
 const remove = document.querySelectorAll("#removecard");
 
 remove.forEach((card) => {});
 function removeEventListener() {
   remove.addEventListener("click", function () {});
 }
- */
