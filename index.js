@@ -10,7 +10,7 @@
 const DOMSelectors = {
   title: document.getElementById("title"),
   image: document.getElementById("image"),
-  link: document.getElementByID("link"),
+  link: document.getElementById("link"),
   text: document.querySelector("post"),
   button: document.querySelector("btn"),
   form: document.querySelector("form"),
@@ -32,7 +32,7 @@ DOMSelectors.form.addEventListener("submit", function additem(event) {
 
     `<div class="display-card">
     <h2 class="card-header">${title}</h2>
-   <p><img src=${img} class="card-img" /></p>
+    <p><img src=${img} class="card-img" /></p>
     <h3 class="card-link">${link}</h3>
     <button type="button" id="remove-card"></button>
  
@@ -43,19 +43,17 @@ DOMSelectors.form.addEventListener("submit", function additem(event) {
   DOMSelectors.link.value = "";
 });
 
-// DOMSelectors.form.addEventListener("click",
+// read the values
+// create object from the values
+// create and push HTML
 
-//read the values
-//create object from the values
-//create and push HTML
 DOMSelectors.form.addEventListener("click", function removecard(event) {
   event.preventDefault();
+  const card = document.querySelectorAll(".post");
+  const remove = document.querySelectorAll("#removecard");
+
+  remove.forEach((card) => {});
+  function removeEventListener() {
+    remove.addEventListener("click", function () {});
+  }
 });
-
-const card = document.querySelectorAll(".card");
-const remove = document.querySelectorAll("#removecard");
-
-remove.forEach((card) => {});
-function removeEventListener() {
-  remove.addEventListener("click", function () {});
-}
