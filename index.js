@@ -9,51 +9,54 @@
 
 const DOMSelectors = {
   title: document.getElementById("title"),
-  image: document.getElementById("image"),
-  link: document.getElementById("link"),
-  text: document.querySelector("post"),
+  artist: document.getElementById("artist"),
+  image: document.getElementById("url"),
+  //buttons and form
   button: document.querySelector("btn"),
-  form: document.querySelector("form"),
-  display: document.getElementById("card"),
-  //query the form
-  //display
+  display: document.getElementById("display"),
+  form: document.querySelector("form-inputs"),
 };
+//query the form
+//display
 
-DOMSelectors.form.addEventListener("submit", function additem(event) {
+DOMSelectors.button.addEventListener("submit", addItems);
+DOMSelectors.clearbtn.addEventListener("click", clearItems);
+
+//additems
+function addItems(event) {
   event.preventDefault();
-  console.log("submit");
+  let inputs = document.createElement("div");
 
   let title = DOMSelectors.title.value;
   let img = DOMSelectors.image.value;
-  let link = DOMSelectors.link.value;
+  let artist = DOMSelectors.url.value;
 
-  DOMSelectors.display.insertAdjacentHTML(
+  inputs.insertAdjacentHTML(
     "beforeend",
 
     `<div class="display-card">
-    <h2 class="card-header">${title}</h2>
-    <p><img src=${img} class="card-img" /></p>
-    <h3 class="card-link">${link}</h3>
-    <button type="button" id="remove-card"></button>
- 
-  </div>`
+      <p class="display-album">${title}</p>
+     <p class="display-img"><img> scr="${img}"</p>
+      <p class ="display-artist">${artist}</p>
+      <button type="button" id="remove-card"></button>
+   
+    </div>`
   );
+
   DOMSelectors.title.value = "";
   DOMSelectors.img.value = "";
   DOMSelectors.link.value = "";
-});
-
+}
 // read the values
 // create object from the values
 // create and push HTML
 
-DOMSelectors.form.addEventListener("click", function removecard(event) {
-  event.preventDefault();
-  const card = document.querySelectorAll(".post");
-  const remove = document.querySelectorAll("#removecard");
+// function clearItems() {
+//   const card = document.querySelectorAll("display");
+//   const remove = document.querySelectorAll("");
 
-  remove.forEach((card) => {});
-  function removeEventListener() {
-    remove.addEventListener("click", function () {});
-  }
-});
+//   remove.forEach((card) => {});
+//   function removeEventListener() {
+//     remove.addEventListener("click", function () {});
+//   }
+// });
