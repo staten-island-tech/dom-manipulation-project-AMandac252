@@ -6,9 +6,9 @@ body,
   padding: 0;
   margin: 0;
 }
-:root { 
+:root {
   /* Type */
---h1: 7.594rem;
+  --h1: 7.594rem;
   --h2: 5.063rem;
   --h3: 3.375rem;
   --h4: 2.25rem;
@@ -41,15 +41,13 @@ h3,
 h4,
 h5 {
   text-align: center;
-  margin-top: 40px;
 }
-
-.form {
+#form {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  margin-top: 40px;
+  height: 50vh;
 }
 .user-input {
   display: flex;
@@ -60,7 +58,7 @@ h5 {
   text-transform: uppercase;
   letter-spacing: 3px;
 }
-#text-box {
+.text-box {
   width: 22rem;
   height: 2.5rem;
   font-size: 2rem;
@@ -78,14 +76,13 @@ h5 {
 .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 1rem 3rem;
+  padding: 1.5rem 4rem;
   display: inline-block;
   margin: 1rem;
   font-size: 2rem;
-  border-radius: 30px;
+  border-radius: 10rem;
   transition: all 0.2s;
-
-
+  position: relative;
   animation: moveInBottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards;
 }
@@ -105,7 +102,6 @@ h5 {
   justify-content: space-around;
   width: 90vw;
   margin: 2rem auto;
-  box-sizing: border-box;
 }
 .display-card {
   display: flex;
@@ -114,8 +110,7 @@ h5 {
   width: 26%;
   height: 55rem;
   margin: 1rem auto;
-  background-color: #ffd0d0;
-  border-radius: 30px;
+  background-color: #131313;
   color: white;
   align-items: center;
 }
@@ -135,4 +130,4 @@ h5 {
   border: none;
   background-color: red;
   color: white;
-} 
+}
