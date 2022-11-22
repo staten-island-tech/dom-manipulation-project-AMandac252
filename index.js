@@ -1,45 +1,42 @@
 //console.log("connected");
 
 const DOMselectors = {
-  title: document.getElementById("title"),
-  artist: document.getElementById("artist"),
-  image: document.getElementById("url"),
-  //buttons and form
-  button: document.querySelector("btn"),
-  display: document.getElementById("display"),
-  form: document.querySelector("form-inputs"),
+  title: document.querySelector("#title"),
+  artist: document.querySelector("#artist"),
+  image: document.querySelector("#url"),
+  button: document.querySelector(".btn"),
+  display: document.querySelector("#display"),
+  form: document.querySelector("#form"),
+  clearBtn: document.querySelectorAll("#remove-card"),
 };
 
-DOMselectors.form.addEventListener("click", addItems);
-DOMselectors.clearBtn.addEventListener("click", clearItems);
-
+DOMselectors.form.addEventListener("submit", addItems);
 //additems
 function addItems(event) {
   event.preventDefault();
 
   const title = DOMselectors.title.value;
   const img = DOMselectors.image.value;
-  const artist = DOMselectors.url.value;
+  const artist = DOMselectors.artist.value;
 
   DOMselectors.display.insertAdjacentHTML(
     "beforeend",
 
     `<div class="display-card">
-        <p class="display-album">${title}</p>
-       <p class="display-img"><img> scr="${img}"</p>
-        <p class ="display-artist">${artist}</p>
-        <button type="button" id="remove-card">x</button>
-     
-      </div>`
+          <p class="display-album">${title}</p>
+         <p class="display-img"><img src="${img}"></p>
+          <p class ="display-artist">${artist}</p>
+          <button class="clearBtn">x</button>
+        </div>`
   );
   DOMselectors.title.value = "";
-  DOMselectors.img.value = "";
-  DOMselectors.link.value = "";
+  DOMselectors.image.value = "";
+  DOMselectors.artist.value = "";
 }
 
-const card = document.querySelectorAll("display-card");
-const remove = document.querySelectorAll("#removecard");
-
-// remove.forEach((card) => {});
-// function removeEventListener() {
-//   remove.addEventListener("click", function () {});
+DOMselectors.clearBtn.addEventListener("click", clearItems);
+//deleteItems
+function clearItems(event) {
+  let target = event.target;
+  target.DOMselectors.parentElement.remove();
+}

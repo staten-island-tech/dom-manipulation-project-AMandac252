@@ -5,6 +5,7 @@ body,
   font-size: 10px;
   padding: 0;
   margin: 0;
+  color: #826b6b;
 }
 :root {
   /* Type */
@@ -16,7 +17,7 @@ body,
   --smallText: 0.8rem;
 }
 h1 {
-  margin-top: 0;
+  margin-top: 40px;
   font-size: var(--h1);
 }
 
@@ -48,6 +49,7 @@ h5 {
   justify-content: space-around;
   align-items: center;
   height: 50vh;
+  background-color: #e7f4ff;
 }
 .user-input {
   display: flex;
@@ -63,6 +65,7 @@ h5 {
   height: 2.5rem;
   font-size: 2rem;
 }
+
 .form-input {
   display: flex;
   flex-direction: column;
@@ -73,7 +76,7 @@ h5 {
 }
 .btn,
 .btn:link,
-.btn:visited {
+.btn:visited, .clearBtn{
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -83,16 +86,18 @@ h5 {
   border-radius: 10rem;
   transition: all 0.2s;
   position: relative;
+  border-style: dashed;
+  border-color: #826b6b;
   animation: moveInBottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards;
 }
 .btn:hover {
   transform: translateY(-0.3rem);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0.2);
+  box-shadow: 0 1rem 2rem #b8deff;
 }
 .btn:active {
   transform: translateY(-1px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0.2);
+  box-shadow: 0 0.5rem 1rem #b38585;
 }
 
 .display {
@@ -102,6 +107,7 @@ h5 {
   justify-content: space-around;
   width: 90vw;
   margin: 2rem auto;
+  
 }
 .display-card {
   display: flex;
@@ -110,24 +116,39 @@ h5 {
   width: 26%;
   height: 55rem;
   margin: 1rem auto;
-  background-color: #131313;
-  color: white;
+  background-color: #ffe9e9;
+  color: #826b6b;
   align-items: center;
+  border-radius: 30px;
+  transition: all 0.2s;
 }
 .display-img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
+  border-radius: 30px;
 }
 .display-artist,
 .display-album {
   font-size: var(--h3);
 }
-.remove {
+
+.display-card:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 1rem 1rem #ddacac;
+}
+
+.clearBtn{
   padding: 1rem 2rem;
   display: inline-block;
   margin: 1rem;
-  font-size: 1rem;
+  font-size: 2rem;
   border: none;
-  background-color: red;
+  background-color: #e26a6a;
   color: white;
+  border-radius: 10px;
+}
+
+.clearBtn:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem #b84a4a;
 }
