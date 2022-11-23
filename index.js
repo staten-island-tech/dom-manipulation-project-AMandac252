@@ -1,42 +1,44 @@
-//console.log("connected");
+// //console.log("connected");
 
-const DOMselectors = {
+const DOMSelectors = {
   title: document.querySelector("#title"),
+  button: document.querySelector(".btn"),
   artist: document.querySelector("#artist"),
   image: document.querySelector("#url"),
-  button: document.querySelector(".btn"),
   display: document.querySelector("#display"),
-  form: document.querySelector("#form"),
-  clearBtn: document.querySelectorAll("#remove-card"),
 };
 
-DOMselectors.form.addEventListener("submit", addItems);
-//additems
-function addItems(event) {
-  event.preventDefault();
+DOMSelectors.button.addEventListener("click", function (e) {
+  e.preventDefault();
+  const title = DOMSelectors.title.value;
+  const img = DOMSelectors.image.value;
+  const artist = DOMSelectors.artist.value;
 
-  const title = DOMselectors.title.value;
-  const img = DOMselectors.image.value;
-  const artist = DOMselectors.artist.value;
+  function addcard() {
+    DOMSelectors.display.insertAdjacentHTML(
+      "beforeend",
 
-  DOMselectors.display.insertAdjacentHTML(
-    "beforeend",
+      `<div class="display-card">
+                <p class="display-album">${title}</p>
+               <p><img class="display-img" src="${img}"></p>
+                <p class ="display-artist">${artist}</p>
+                <button class="remove btn">Remove Album</button>
+              </div>`
+    );
 
-    `<div class="display-card">
-          <p class="display-album">${title}</p>
-         <p class="display-img"><img src="${img}"></p>
-          <p class ="display-artist">${artist}</p>
-          <button class="clearBtn">x</button>
-        </div>`
+    function clear() {
+      DOMSelectors.title.value = "";
+      DOMSelectors.artist.value = "";
+      DOMSelectors.image.value = "";
+    }
+    clear();
+  }
+
+  addcard();
+  document.querySelectorAll(".remove").forEach((element) =>
+    element.addEventListener("click", function (e) {
+      e.target.parentElement.remove();
+    })
   );
-  DOMselectors.title.value = "";
-  DOMselectors.image.value = "";
-  DOMselectors.artist.value = "";
-}
-
-DOMselectors.clearBtn.addEventListener("click", clearItems);
-//deleteItems
-function clearItems(event) {
-  let target = event.target;
-  target.DOMselectors.parentElement.remove();
-}
+});
+console.log(DOMSelectors);

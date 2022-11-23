@@ -90,6 +90,7 @@ h5 {
   border-color: #826b6b;
   animation: moveInBottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards;
+  background-color: #ffffff;
 }
 .btn:hover {
   transform: translateY(-0.3rem);
@@ -97,7 +98,7 @@ h5 {
 }
 .btn:active {
   transform: translateY(-1px);
-  box-shadow: 0 0.5rem 1rem #b38585;
+  box-shadow: 0 0.5rem 1rem #b8deff;
 }
 
 .display {
@@ -107,6 +108,8 @@ h5 {
   justify-content: space-around;
   width: 90vw;
   margin: 2rem auto;
+  box-sizing: border-box;
+  align-items: center;
   
 }
 .display-card {
@@ -116,16 +119,18 @@ h5 {
   width: 26%;
   height: 55rem;
   margin: 1rem auto;
-  background-color: #ffe9e9;
+  background-color: #d9eaf8;
   color: #826b6b;
   align-items: center;
   border-radius: 30px;
   transition: all 0.2s;
 }
 .display-img {
-  max-width: 100%;
+  max-width: 85%;
   height: auto;
-  border-radius: 30px;
+  border-radius: 10px;
+  padding: 10%;
+  align-content: center;
 }
 .display-artist,
 .display-album {
@@ -134,7 +139,7 @@ h5 {
 
 .display-card:hover {
   transform: translateY(-0.5rem);
-  box-shadow: 0 1rem 1rem #ddacac;
+  box-shadow: 0 1rem 1rem #b8deff;
 }
 
 .clearBtn{
@@ -143,12 +148,12 @@ h5 {
   margin: 1rem;
   font-size: 2rem;
   border: none;
-  background-color: #e26a6a;
-  color: white;
+  background-color: #b8deff;
+  color: #ffffff;
   border-radius: 10px;
 }
 
 .clearBtn:hover {
   transform: translateY(-0.3rem);
-  box-shadow: 0 1rem 2rem #b84a4a;
+  box-shadow: 0 1rem 2rem #b8deff;
 }
