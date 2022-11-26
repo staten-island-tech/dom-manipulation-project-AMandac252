@@ -43,6 +43,8 @@ h4,
 h5 {
   text-align: center;
 }
+
+
 #form {
   display: flex;
   flex-direction: row;
@@ -63,7 +65,11 @@ h5 {
 .text-box {
   width: 22rem;
   height: 2.5rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
+}
+
+.label{
+  font-size: 2.5rem;
 }
 
 .form-input {
@@ -115,26 +121,28 @@ h5 {
 .display-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  width: 26%;
-  height: 55rem;
-  margin: 1rem auto;
-  background-color: #d9eaf8;
-  color: #826b6b;
-  align-items: center;
+  box-sizing: border-box;
   border-radius: 30px;
+  font-style: italic;
+  margin-top: 5%;
+  /* margin: 2rem; */
+  width: 33%;
+  font-size: 1rem;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  background-color: #e7f4ff;
   transition: all 0.2s;
 }
 .display-img {
-  max-width: 85%;
-  height: auto;
-  border-radius: 10px;
-  padding: 10%;
-  align-content: center;
+  padding: 5%;
+  margin: auto;
+  width: 100%;
 }
 .display-artist,
 .display-album {
-  font-size: var(--h3);
+  margin-top: 1rem;
+  font-size: var(--h4);
 }
 
 .display-card:hover {

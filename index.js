@@ -25,13 +25,9 @@ DOMSelectors.button.addEventListener("click", function (e) {
                 <button class="remove btn">Remove Album</button>
               </div>`
     );
-
-    function clear() {
-      DOMSelectors.title.value = "";
-      DOMSelectors.artist.value = "";
-      DOMSelectors.image.value = "";
-    }
-    clear();
+    DOMSelectors.title.value = "";
+    DOMSelectors.artist.value = "";
+    DOMSelectors.image.value = "";
   }
 
   addcard();
