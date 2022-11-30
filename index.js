@@ -25,11 +25,9 @@ DOMSelectors.button.addEventListener("click", function (e) {
                 <button class="remove btn">Remove Album</button>
               </div>`
     );
-    DOMSelectors.title.value = "";
-    DOMSelectors.artist.value = "";
-    DOMSelectors.image.value = "";
-  }
 
+    clearinput();
+  }
   addcard();
   document.querySelectorAll(".remove").forEach((element) =>
     element.addEventListener("click", function (e) {
@@ -38,3 +36,9 @@ DOMSelectors.button.addEventListener("click", function (e) {
   );
 });
 console.log(DOMSelectors);
+
+function clearinput() {
+  DOMSelectors.title.value = "";
+  DOMSelectors.artist.value = "";
+  DOMSelectors.image.value = "";
+}
