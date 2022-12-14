@@ -1,5 +1,3 @@
-// //console.log("connected");
-
 const DOMSelectors = {
   title: document.querySelector("#title"),
   button: document.querySelector(".btn"),
